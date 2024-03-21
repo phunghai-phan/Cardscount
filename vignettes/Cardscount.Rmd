@@ -1,0 +1,84 @@
+---
+title: "Cardscount"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Cardscount}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Cardscount)
+```
+
+## Introduction
+
+
+This vignette provides an overview of the `Cardscount` package, which provides functions for working to calculate the score on hand of the player and dealer in a blackjack game. It includes one main function, `play_blackjack`, which calculates the score of a hand in blackjack based on the numeric value of the cards and the rules of the game.
+
+## Installation
+
+You can install `Cardscount` from CRAN using the following command:
+
+
+```{r warning=FALSE, eval=FALSE}
+install.packages("Cardscount")
+```
+
+or through GitHub using the following command:
+
+```{r warning=FALSE, eval=FALSE}
+devtools::install_github("phunghai-phan/Cardscount")
+```
+
+## How to load the package
+You can load "Cardscount" by using this following command:
+
+```{r warning=FALSE, eval=FALSE}
+
+library("Cardscount")
+```
+
+## Basic Usage
+### Function: calculate_blackjack_score
+
+This function calculates the score of a hand in blackjack based on the provided cards.
+
+*Parameters:*
+
+ "cards": A list of strings representing the cards in the hand. Each string is a two-character string where the first character is the value of the card and the second character is the suit of the card. The card values are as follows:
+- Number cards are their value (2 through 10).
+
+- Jack, Queen, and King (face cards) are all valued at 10.
+
+- Aces are valued at 11 if the total score of the hand is less than or equal to 21, and 1 otherwise.
+
+*Returns:*
+
+A list of player scores and the dealer's score.
+
+```{r message=FALSE, eval=FALSE}
+# Example usage:
+library(Cardscount)
+ play_blackjack()
+
+# On console, you will see:
+Enter the number of players: 1
+Dealer, enter your cards (comma-separated): 
+Q,A
+Enter cards for Player  1  (comma-separated): 
+10,9
+Player  1  score:  19 
+Dealer score:  21 
+```
+
+## Conclusion
+
+This vignette provided a brief overview of the "Cardscount" package and its calculate_blackjack_score function. Explore the documentation and experiment with the function to calculate blackjack scores effectively.

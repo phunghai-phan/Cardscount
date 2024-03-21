@@ -1,0 +1,17 @@
+Package: Cardscount
+Title: A Simple Blackjack Score Calculator
+Version: 0.0.0.9000
+Authors@R: person("Hai", "Phan", , "ppha0028@student.monash.edu", role = c("aut", "cre"))
+Description: A package to calculate the score of a hand in blackjack.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports: 
+    magrittr
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
